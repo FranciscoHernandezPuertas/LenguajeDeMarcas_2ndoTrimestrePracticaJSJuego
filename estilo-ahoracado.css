@@ -1,0 +1,170 @@
+@font-face {
+  font-family: 'fuente';
+  src: url('fuente/Honk/Protest_Revolution/ProtestRevolution-Regular.ttf'); /* ajusta el nombre del archivo según el formato que hayas descargado */
+}
+
+* {
+  box-sizing: border-box;
+}
+.main-container {
+  max-width: 1024px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-areas: 'titulo titulo titulo titulo'
+                      'main main main main'
+                      'main main main main';
+}
+
+header{
+  grid-area: titulo;
+}
+
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-areas: 'abecedario opciones partida dibujo';
+  gap: 2%;
+}
+
+section[id='opciones']{
+  grid-area: opciones;
+  align-self: center;
+  justify-content: center;
+}
+
+article {
+  grid-area: partida;
+  align-self: center;
+}
+
+section[id='dibujo']{
+  grid-area: dibujo;
+}
+img {
+  grid-area: dibujo;
+}
+
+section[id='turnos']{
+  grid-area: turnos;
+}
+
+section[id='abecedario']{
+  grid-area: abecedario;
+  align-self: center;
+  justify-self: center;
+}
+
+h1{
+  text-align: center;
+  font-family: 'fuente';
+  font-weight: 400;
+  font-style: normal;
+  font-size: 500%;
+}
+
+h1.titulo {
+  margin: 0 auto;
+}
+h1#msg-final {
+  color: #891818;
+  transition: all .5s ease;
+  transform: scale(0);
+  min-height: 50px;
+  margin-bottom: 0;
+}
+.zoom-in {
+  transform: scale(1) !important;
+}
+#msg-final.ganado {
+  color:green;
+}
+#acierto {
+  text-align: center;
+  min-height: 24px;
+  transform: scale(0);
+}
+.acierto {
+  animation: zoomInOut 1s ease;
+}
+.rojo {
+  color:  #891818;
+}
+.verde {
+  color: green;
+}
+@keyframes zoomInOut {
+  0% { transform: scale(0); }
+  50% { transform: scale(1); }
+  70% { transform: scale(1); }
+  100% { transform: scale(0); }
+}
+h2.palabra {
+  margin: 0 auto 25px auto;
+  text-align: center;
+  color: royalblue;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+.fila {
+  margin: 10px auto; 
+}
+
+.columna {
+  width: 50%;
+  text-align: center;
+}
+
+#turnos h3 {
+  margin: auto;
+}
+h3 span {
+   color: #891818;
+}
+.noEsta:disabled {
+  color:#891818;
+  font-weight: bolder;
+}
+.siEsta:disabled {
+  color:green;
+  font-weight: bolder;
+}
+picture {
+  position: relative;
+}
+
+.encuadreV {
+  border: 2px dashed green;
+  padding: 3px 2px 2px 6px;
+}
+
+.encuadreR {
+  border: 2px dashed  #891818;
+  padding: 3px 2px 2px 6px;
+  color:  #891818;
+  
+}
+
+/*button[id="reset"], button[id="pista"] {*/
+  button {
+    background-color: grey;
+    border: none;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+}
+button:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+button [class="letra"]{
+  padding: 10px;
+  font-size: 10px;
+  margin: 2px 1px;
+  border-radius: 6px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <title>El Ahorcado</title>
+    <link rel="stylesheet" href="estilo-ahoracado.css">
+    <link rel="icon" type="image/vnd.icon" href="img/juego-del-ahorcado-claro.png">
+    <!--fuente título-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Josefin+Sans:ital,wght@1,200&family=Oswald:wght@200&family=Protest+Revolution&family=Protest+Riot&family=Sofia+Sans+Condensed:wght@200&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <div class="main-container">
+
+        <header>
+          <h1 class="titulo">Juego del ahorcado</h1>
+          <h1 id="msg-final"></h1>
+        </header>
+        
+        <main>
+          
+          <article>
+            <h3 id="acierto"></h3>
+            <h2 class="palabra" id="palabra"></h2>
+          </article>
+
+          <section id="opciones">
+            <h2>Opciones del juego:</h2>
+            <button id="alta">Alta nueva palabra</button>
+            <button id="reset">Elegir otra palabra</button>
+            <button id="pista">Dame una pista!</button>
+            <p id="hueco-pista"></p>
+            <div class="fila" id="turnos">
+              <div class="columna">
+                <h3>Intentos restantes: <span id="intentos">6</span></h3>
+              </div>
+          </section>
+          
+          <section id="dibujo">
+            <img src="img/ahorcado_6.png" id="imagen" height="400px">
+          </section>
+        
+          <section id="abecedario">
+            <div class="fila" id="abcdario">
+            </div>
+        </section>
+
+      </main>
+
+  </div>
+    <script src="ahorcado.js"></script>
+  </body>
+</html>
